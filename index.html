@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SRM CGPA Calculator</title>
+
+    <meta name="theme-color" content="#8b5cf6">
+    <meta name="description"
+        content="Calculate your SRM CGPA, Percentage and Academic Standing instantly.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div class="logo-section">
+
+                <img
+                    src="https://scet.berkeley.edu/wp-content/uploads/8.-SRM-Logo.png"
+                    alt="SRM Logo"
+                    class="logo">
+
+                <div>
+
+                    <h1>SRM CGPA Calculator 🎓</h1>
+
+                    <p>
+                        Calculate your CGPA, Percentage & Academic Standing instantly
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="status-box" id="statusBox">
+                ✨ Ready to Calculate
+            </div>
+
+        </header>
+
+        <!-- YEAR SELECTION -->
+
+        <section class="card">
+
+            <h2>📅 Select Your Current Year</h2>
+
+            <div class="year-grid">
+
+                <div class="year-card" onclick="selectYear(2)">
+                    <h3>1st Year</h3>
+                    <p>2 Semesters</p>
+                </div>
+
+                <div class="year-card" onclick="selectYear(4)">
+                    <h3>2nd Year</h3>
+                    <p>4 Semesters</p>
+                </div>
+
+                <div class="year-card" onclick="selectYear(6)">
+                    <h3>3rd Year</h3>
+                    <p>6 Semesters</p>
+                </div>
+
+                <div class="year-card" onclick="selectYear(8)">
+                    <h3>4th Year</h3>
+                    <p>8 Semesters</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- MAIN CONTENT -->
+
+        <div class="main-layout">
+
+            <!-- LEFT SIDE -->
+
+            <div class="left-panel">
+
+                <!-- SGPA ENTRY -->
+
+                <section class="card">
+
+                    <h2>📚 Enter Your Semester SGPA</h2>
+
+                    <div
+                        id="semesterContainer"
+                        class="semester-grid">
+
+                    </div>
+
+                    <button
+                        class="calculate-btn"
+                        onclick="calculateCGPA()">
+
+                        Calculate CGPA
+
+                    </button>
+
+                    <button
+                        class="reset-btn"
+                        onclick="resetData()">
+
+                        Reset All
+
+                    </button>
+
+                </section>
+
+                <!-- GRADING SCALE -->
+
+                <section class="card">
+
+                    <h2>📖 SRM Grading Scale</h2>
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>SGPA Range</th>
+                                <th>Grade</th>
+                                <th>Status</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>9.0 - 10.0</td>
+                                <td>O</td>
+                                <td>Outstanding</td>
+                            </tr>
+
+                            <tr>
+                                <td>8.0 - 8.9</td>
+                                <td>A+</td>
+                                <td>Excellent</td>
+                            </tr>
+
+                            <tr>
+                                <td>7.0 - 7.9</td>
+                                <td>A</td>
+                                <td>Very Good</td>
+                            </tr>
+
+                            <tr>
+                                <td>6.0 - 6.9</td>
+                                <td>B+</td>
+                                <td>Good</td>
+                            </tr>
+
+                            <tr>
+                                <td>5.5 - 5.9</td>
+                                <td>B</td>
+                                <td>Average</td>
+                            </tr>
+
+                            <tr>
+                                <td>Below 5.5</td>
+                                <td>F</td>
+                                <td>Fail</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </section>
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+
+            <aside class="summary-card">
+
+                <h2>🏆 Academic Summary</h2>
+
+                <div class="stat-box">
+
+                    <h4>CGPA</h4>
+
+                    <h1
+                        id="cgpaResult"
+                        class="result-value">
+
+                        --
+
+                    </h1>
+
+                </div>
+
+                <div class="stat-box">
+
+                    <h4>Grade</h4>
+
+                    <h1
+                        id="gradeResult"
+                        class="result-value">
+
+                        --
+
+                    </h1>
+
+                </div>
+
+                <div class="stat-box">
+
+                    <h4>Percentage</h4>
+
+                    <h1
+                        id="percentageResult"
+                        class="result-value">
+
+                        --
+
+                    </h1>
+
+                </div>
+
+                <div
+                    class="message-box"
+                    id="messageBox">
+
+                    Enter your SGPA to generate your academic summary.
+
+                </div>
+
+            </aside>
+
+        </div>
+
+        <!-- FOOTER -->
+
+        <footer class="footer">
+
+            <div class="feature-box">
+                🎓 SRM University Compatible
+            </div>
+
+            <div class="feature-box">
+                📊 Instant CGPA Analysis
+            </div>
+
+            <div class="feature-box">
+                🚀 Built For Students
+            </div>
+
+            <div class="feature-box">
+                💜 Modern UI Experience
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

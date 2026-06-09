@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    color:white;
+
+    background:
+    radial-gradient(circle at top left,
+    rgba(124,58,237,0.35),
+    transparent 35%),
+
+    radial-gradient(circle at bottom right,
+    rgba(99,102,241,0.30),
+    transparent 35%),
+
+    #0f0f1a;
+}
+
+/* CONTAINER */
+
+.container{
+    width:100%;
+    min-height:100vh;
+    padding:35px;
+}
+
+/* HEADER */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.logo-section{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.logo{
+    width:75px;
+    background:white;
+    padding:8px;
+    border-radius:18px;
+
+    box-shadow:
+    0 0 25px rgba(124,58,237,0.3);
+}
+
+.logo-section h1{
+    font-size:42px;
+    font-weight:700;
+}
+
+.logo-section p{
+    color:#cbd5e1;
+    margin-top:3px;
+}
+
+.status-box{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(18px);
+    padding:14px 22px;
+    border-radius:14px;
+}
+
+/* GLASS CARD */
+
+.card,
+.summary-card,
+.feature-box{
+    background:rgba(255,255,255,0.04);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:22px;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,0.25);
+}
+
+.card{
+    padding:25px;
+    margin-bottom:25px;
+}
+
+.card h2{
+    margin-bottom:20px;
+    font-size:22px;
+}
+
+/* YEAR CARDS */
+
+.year-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.year-card{
+    background:rgba(255,255,255,0.03);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:16px;
+
+    padding:20px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:0.35s ease;
+}
+
+.year-card:hover{
+    transform:translateY(-4px);
+
+    border-color:#8b5cf6;
+
+    box-shadow:
+    0 0 25px rgba(139,92,246,0.25);
+}
+
+.year-card.active{
+    background:linear-gradient(
+        135deg,
+        rgba(124,58,237,0.30),
+        rgba(99,102,241,0.20)
+    );
+
+    border-color:#8b5cf6;
+
+    box-shadow:
+    0 0 25px rgba(139,92,246,0.35);
+}
+
+/* MAIN */
+
+.main-layout{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+}
+
+/* SEMESTERS */
+
+.semester-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.semester-card{
+    background:rgba(255,255,255,0.03);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:18px;
+
+    padding:20px;
+
+    color:white;
+
+    transition:0.3s ease;
+}
+
+.semester-card:hover{
+    border-color:#8b5cf6;
+
+    transform:translateY(-2px);
+}
+
+.semester-card h3{
+    margin-bottom:10px;
+    font-size:18px;
+}
+
+/* INPUTS */
+
+.semester-card input{
+    width:100%;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(255,255,255,0.10);
+
+    color:white;
+
+    font-size:16px;
+
+    transition:0.3s;
+}
+
+.semester-card input::placeholder{
+    color:rgba(255,255,255,0.4);
+}
+
+.semester-card input:focus{
+    outline:none;
+
+    border-color:#8b5cf6;
+
+    box-shadow:
+    0 0 15px rgba(139,92,246,0.35);
+}
+
+/* BUTTONS */
+
+button{
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+
+    margin-top:12px;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+.calculate-btn{
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        #8b5cf6,
+        #6366f1
+    );
+
+    box-shadow:
+    0 10px 25px rgba(139,92,246,0.35);
+}
+
+.reset-btn{
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        #ef4444,
+        #dc2626
+    );
+}
+
+/* SUMMARY */
+
+.summary-card{
+    padding:25px;
+    height:fit-content;
+}
+
+.summary-card h2{
+    margin-bottom:20px;
+}
+
+.stat-box{
+    background:rgba(255,255,255,0.03);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:18px;
+
+    padding:22px;
+
+    text-align:center;
+
+    margin-bottom:15px;
+}
+
+.stat-box h4{
+    color:#a78bfa;
+    margin-bottom:10px;
+}
+
+.stat-box h1{
+    font-size:36px;
+}
+
+.message-box{
+    background:rgba(255,255,255,0.03);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:18px;
+
+    padding:18px;
+
+    text-align:center;
+}
+
+/* TABLE */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,
+td{
+    padding:12px;
+    text-align:center;
+}
+
+th{
+    color:#a78bfa;
+}
+
+tr{
+    border-bottom:
+    1px solid rgba(255,255,255,0.08);
+}
+
+/* FOOTER */
+
+.footer{
+    margin-top:25px;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:15px;
+}
+
+.feature-box{
+    padding:18px;
+    text-align:center;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .main-layout{
+        grid-template-columns:1fr;
+    }
+
+    .year-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .header{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+    }
+}
+
+@media(max-width:600px){
+
+    .container{
+        padding:20px;
+    }
+
+    .semester-grid{
+        grid-template-columns:1fr;
+    }
+
+    .year-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer{
+        grid-template-columns:1fr;
+    }
+
+    .logo-section h1{
+        font-size:28px;
+    }
+
+    .logo{
+        width:60px;
+    }
+}
